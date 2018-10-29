@@ -250,8 +250,8 @@
 				AD23A609211863A9008B24AE /* Public */,
 				AD23A5FC21181DFE008B24AE /* Controller */,
 				AD23A5FD21181E14008B24AE /* View */,
-				AD46EE312182BAA10088E6B8 /* Model */,
 				AD23A5FA21181DC9008B24AE /* ViewModel */,
+				AD5BA67F21871DD4001A83D4 /* Model */,
 				AD23A5D221181AF5008B24AE /* AppDelegate.swift */,
 				AD23A5DC21181AF5008B24AE /* Assets.xcassets */,
 				AD23A5E121181AF5008B24AE /* Info.plist */,
@@ -351,12 +351,12 @@
 			path = Public;
 			sourceTree = "<group>";
 		};
-		AD46EE312182BAA10088E6B8 /* Model */ = {
+		AD5BA67F21871DD4001A83D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				AD46EE322182BACB0088E6B8 /* LoginModel.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AD8B37DB212C19A700D94757 /* Products */ = {
