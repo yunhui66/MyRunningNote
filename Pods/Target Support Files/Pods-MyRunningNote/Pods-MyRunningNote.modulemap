@@ -1,0 +1,6 @@
+framework module Pods_MyRunningNote {
+  umbrella header "Pods-MyRunningNote-umbrella.h"
+
+  export *
+  module * { export * }
+}
