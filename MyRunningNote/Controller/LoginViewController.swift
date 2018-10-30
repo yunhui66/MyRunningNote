@@ -15,8 +15,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationController?.navigationBar.isHidden = true
-        
+        //设置状态栏字体颜色为黑色
+        UIApplication.shared.statusBarStyle = .default
         self.setupViews()
         viewModel = LoginViewModel()
         

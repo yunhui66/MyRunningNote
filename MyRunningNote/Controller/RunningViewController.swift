@@ -7,17 +7,19 @@
 //
 
 import UIKit
-import SnapKit
 
 class RunningViewController: UIViewController {
 
+    var runView:RunningPageView!
+    var viewModel:RunningViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.initNavigationItem(imageName: "run_record", left: true)
-        
         self.initNavigationItem(imageName: "run_single_train", left: false)
-        
-        self.initView()
+        viewModel = RunningViewModel()
+        self.setupSubviews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +27,7 @@ class RunningViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //设置导航栏左右两边的图片按钮
     func initNavigationItem(imageName:NSString, left:Bool) {
         
         let image = UIImage(named: imageName as String)
@@ -39,26 +42,15 @@ class RunningViewController: UIViewController {
         
     }
     
-    func initView() {
-        let runView = RunningPageView.init()
+    func setupSubviews() {
+        runView = RunningPageView.init(frame: CGRect(x: 0, y: NAVI_STATUS_HIGHT, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-NAVI_STATUS_HIGHT))
         self.view.addSubview(runView)
-        //NSLog("labelwidth = %d", runView.titlelab.frame.width)
-        runView.snp.makeConstraints { (make) in
-            make.top.equalTo(NAVI_STATUS_HIGHT)
-            make.width.equalTo(SCREEN_WIDTH)
-            make.height.equalTo(SCREEN_HEIGHT - CGFloat.init(NAVI_STATUS_HIGHT))
-        }
-        //runView.backgroundColor = UIColor.gray
-        runView.runningBtn.addTarget(self, action: #selector(runningStartTouch), for: .touchUpInside)
+        //开始跑步按钮添加监听事件
+        runView.runningBtn.addTarget(self, action: #selector(runningStartAction(sender:)), for: .touchUpInside)
     }
     
-    @objc func runningStartTouch() {
-        self.hidesBottomBarWhenPushed = true;
-        //实例化一个将要跳转的viewController
-        let mapViewVC = MapViewController()
-        //跳转
-        self.navigationController?.pushViewController(mapViewVC , animated: true)
-        //最后一句话，可以保证在back回到A时，tabBar会恢复正常显示
-        self.hidesBottomBarWhenPushed = false;
+    //开始跑步按钮响应事件
+    @objc func runningStartAction(sender: UIButton) {
+        viewModel.runningStartAction(controller: self)
     }
 }

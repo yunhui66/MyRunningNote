@@ -24,14 +24,12 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let tableView = UITableView(frame: self.view.frame, style: .plain)
         //注册cell
         tableView.register(NSClassFromString("UITableViewCell"), forCellReuseIdentifier: "UITableViewCellId")
-        //tableView.register(UINib.init(nibName: "UITableViewCell", bundle: nil), forCellReuseIdentifier: "UITableViewCellId")
         self.view.addSubview(tableView)
         //设置数据源与代理
         tableView.delegate = self
         tableView.dataSource = self
         
         let headerView = MineHeaderView.init(frame: CGRect(x: 64, y: 0, width: SCREEN_WIDTH, height: 110))
-        //headerView.backgroundColor = UIColor.orange
         self.view.addSubview(headerView)
         tableView.tableHeaderView = headerView
         
@@ -48,7 +46,6 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //获取载体cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCellId", for: indexPath)
-        //cell.layer.cornerRadius = 10
         //使用数据模型中信息对cell进行设置
         let item = tableData[indexPath.row]
         cell.accessoryType = .disclosureIndicator
@@ -90,16 +87,6 @@ class MineViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             NSLog("index.row = %d", indexPath.row)
         }
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //self.navigationController?(true, animated: true)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        //self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

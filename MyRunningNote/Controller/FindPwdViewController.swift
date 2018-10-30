@@ -15,7 +15,6 @@ class FindPwdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         viewModel = FindPwdViewModel()
         self.setupSubviews()
     }

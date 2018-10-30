@@ -40,6 +40,7 @@
 		AD5BA6322186F5F0001A83D4 /* FindPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5BA6312186F5F0001A83D4 /* FindPwdViewController.swift */; };
 		AD5BA6342186F682001A83D4 /* FindPwdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5BA6332186F682001A83D4 /* FindPwdView.swift */; };
 		AD5BA6362186F781001A83D4 /* FindPwdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5BA6352186F781001A83D4 /* FindPwdViewModel.swift */; };
+		AD71608721883FD00022EBC1 /* RunningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD71608621883FD00022EBC1 /* RunningViewModel.swift */; };
 		AD8B37E3212C19B400D94757 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8B37E0212C19A700D94757 /* SnapKit.framework */; };
 		AD8B37E4212C19B400D94757 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD8B37E0212C19A700D94757 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ADBB30C9212D076C00AED3C2 /* CompetitionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBB30C7212D076C00AED3C2 /* CompetitionTableCell.swift */; };
@@ -155,6 +156,7 @@
 		AD5BA6312186F5F0001A83D4 /* FindPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdViewController.swift; sourceTree = "<group>"; };
 		AD5BA6332186F682001A83D4 /* FindPwdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdView.swift; sourceTree = "<group>"; };
 		AD5BA6352186F781001A83D4 /* FindPwdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPwdViewModel.swift; sourceTree = "<group>"; };
+		AD71608621883FD00022EBC1 /* RunningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewModel.swift; sourceTree = "<group>"; };
 		AD8B37DA212C19A700D94757 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = "../SnapKit-develop/SnapKit.xcodeproj"; sourceTree = "<group>"; };
 		ADBB30C7212D076C00AED3C2 /* CompetitionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionTableCell.swift; sourceTree = "<group>"; };
 		ADBB30C8212D076C00AED3C2 /* CompetitionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompetitionTableCell.xib; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				AD46EE2F2182BA950088E6B8 /* LoginViewModel.swift */,
 				AD5BA62E2186B661001A83D4 /* RegisterViewModel.swift */,
 				AD5BA6352186F781001A83D4 /* FindPwdViewModel.swift */,
+				AD71608621883FD00022EBC1 /* RunningViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				ADBB30CE212D0D6400AED3C2 /* MineHeaderView.swift in Sources */,
 				ADE944F7212E7A7700216BDA /* AssociationInfoViewController.swift in Sources */,
 				AD5BA62F2186B661001A83D4 /* RegisterViewModel.swift in Sources */,
+				AD71608721883FD00022EBC1 /* RunningViewModel.swift in Sources */,
 				AD131A4F2131283600A57B88 /* CompetitionInfoViewController.swift in Sources */,
 				ADBB30D6212D35D100AED3C2 /* RNViewController.swift in Sources */,
 				AD23A5FF21182A2B008B24AE /* RNNaviViewController.swift in Sources */,
